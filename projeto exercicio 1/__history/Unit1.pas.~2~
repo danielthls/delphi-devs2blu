@@ -1,0 +1,49 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    EdtParcela1: TEdit;
+    Label2: TLabel;
+    edtParcela2: TEdit;
+    Button1: TButton;
+    EdtResultado: TEdit;
+    Label3: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    procedure somaParcelas;{ Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  self.somaParcelas;
+end;
+
+procedure TForm1.somaParcelas;
+var
+xParcela1, xParcela2, xResultado: integer;
+begin
+  xParcela1 := strToInt(edtParcela1.text);
+  xParcela2 := strToInt(edtParcela2.text);
+
+  xResultado := xParcela1 + xParcela2;
+
+  edtResultado.text := IntToStr(xResultado);
+end;
+
+end.
