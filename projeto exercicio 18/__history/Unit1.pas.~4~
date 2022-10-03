@@ -1,0 +1,53 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TIdadeResultado = array of integer;
+  TMaioridadeResultado = array of string;
+  TForm1 = class(TForm)
+    listResultado: TListBox;
+    Label1: TLabel;
+    I: TLabel;
+    edtIdade: TEdit;
+    btnIncluir: TButton;
+    btnListar: TButton;
+  private
+    procedure incluirPessoa;
+    function checaMaioridade(pIdade: integer): string;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+function TForm1.checaMaioridade(pIdade: integer): string;
+begin
+  if pIdade >= 18 then
+    result:= 'Maior de idade'
+  else
+    result:= 'Menor de idade';
+end;
+
+procedure TForm1.incluirPessoa;
+var
+  xIdade: integer;
+  xMaioridade: string;
+  xArrayLenght: integer;
+begin
+  xArrayLenght := Length(TIdadeResultado)-1;
+  xIdade := strToInt(edtIdade.text);
+
+end;
+
+end.

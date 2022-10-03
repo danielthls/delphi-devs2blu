@@ -1,0 +1,78 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TRegistroPessoas = record
+    nome: string;
+    maioridade: string;
+  end;
+
+  TNomePessoas = array of tRegistroPessoas;
+
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    I: TLabel;
+    edtIdade: TEdit;
+    btnIncluir: TButton;
+    btnListar: TButton;
+    Label2: TLabel;
+    edtNome: TEdit;
+    mmResultado: TMemo;
+    procedure btnIncluirClick(Sender: TObject);
+  private
+    fNomePessoas: TNomePessoas;
+    procedure incluirPessoa;
+    procedure listarNomes;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnIncluirClick(Sender: TObject);
+begin
+  incluirPessoa;
+  showMessage(fNomePessoas[length(fNomePessoas)-1].nome + ' incluído com sucesso');
+end;
+
+procedure TForm1.incluirPessoa;
+var
+  xIdade: integer;
+  xRegistroPessoa: TRegistroPessoas;
+begin
+  xRegistroPessoa.nome := edtNome.text;
+
+  xIdade := strToInt(edtIdade.text);
+  if xIdade >= 18 then
+    xRegistroPessoa.maioridade:= 'É maior de idade'
+  else
+    xRegistroPessoa.maioridade:= 'Não é maior de idade';
+
+  setLength(fNomePessoas,length(fNomePessoas)+1);
+  fNomePessoas[length(fNomePessoas)-1] := xRegistroPessoa;
+
+end;
+
+procedure TForm1.listarNomes;
+var
+  I: Integer;
+begin
+  for i := 0 to Length(fNomePessoas) do
+  begin
+    mmResultado.Lines.Add(fNomePessoas[i].nome + ': ' + fNomePessoas[i].maioridade);
+  end;
+
+end;
+
+end.

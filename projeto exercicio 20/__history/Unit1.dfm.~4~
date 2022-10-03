@@ -1,0 +1,101 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 329
+  ClientWidth = 552
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 24
+    Width = 34
+    Height = 13
+    Caption = 'Modelo'
+  end
+  object Label2: TLabel
+    Left = 200
+    Top = 24
+    Width = 24
+    Height = 13
+    Caption = 'Valor'
+  end
+  object Label3: TLabel
+    Left = 344
+    Top = 24
+    Width = 19
+    Height = 13
+    Caption = 'Ano'
+  end
+  object Label4: TLabel
+    Left = 445
+    Top = 88
+    Width = 72
+    Height = 13
+    Caption = 'Total de carros'
+  end
+  object lblTotalCarros: TLabel
+    Left = 445
+    Top = 107
+    Width = 21
+    Height = 30
+  end
+  object Label5: TLabel
+    Left = 445
+    Top = 152
+    Width = 99
+    Height = 13
+    Caption = 'Carros at'#233' ano 2000'
+  end
+  object lblAno2000: TLabel
+    Left = 445
+    Top = 171
+    Width = 53
+    Height = 13
+  end
+  object edtModelo: TEdit
+    Left = 24
+    Top = 43
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object edtValor: TEdit
+    Left = 200
+    Top = 43
+    Width = 81
+    Height = 21
+    TabOrder = 1
+  end
+  object edtAno: TEdit
+    Left = 344
+    Top = 43
+    Width = 81
+    Height = 21
+    TabOrder = 2
+  end
+  object mmListaCarros: TMemo
+    Left = 24
+    Top = 88
+    Width = 401
+    Height = 177
+    Lines.Strings = (
+      '')
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 234
+    Top = 280
+    Width = 113
+    Height = 25
+    Caption = 'Incluir ve'#237'culos'
+    TabOrder = 4
+  end
+end

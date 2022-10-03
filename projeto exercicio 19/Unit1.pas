@@ -1,0 +1,79 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TSexo = (TMasculino, TFeminino);
+
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    edtNome: TEdit;
+    TRGSexo: TRadioGroup;
+    mmPessoas: TMemo;
+    lblHomens: TLabel;
+    lblMulheres: TLabel;
+    Label2: TLabel;
+    Button1: TButton;
+    lblContaHomem: TLabel;
+    lblContaMulher: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    procedure incluiPessoa;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  incluiPessoa;
+end;
+
+procedure TForm1.incluiPessoa;
+var
+  xNome, xSexo: string;
+  xContaHomem, xContaMulher: integer;
+begin
+  case TSexo(TRGSexo.ItemIndex) of
+  TMasculino:
+    begin
+    xSexo:= 'Masculino';
+    xContaHomem := strToInt(lblContaHomem.caption) + 1;
+    lblContaHomem.caption := intToStr(xContaHomem);
+    lblHomens.caption := 'Total homens: ' + intToStr(xContaHomem);
+    end;
+  TFeminino:
+    begin
+    xSexo:= 'Feminino';
+    xContaMulher := strToInt(lblContaMulher.caption) + 1;
+    lblContaMulher.caption := intToStr(xContaMulher);
+    lblMulheres.caption := 'Total mulheres: ' + intToStr(xContaMulher);
+    end
+  Else
+    ShowMessage('Selecione o sexo da pessoa');
+    exit;
+  end;
+
+  xNome := edtNome.text;
+
+  mmPessoas.Lines.Add(xNome + ': ' + xSexo);
+
+  edtNome.text := '';
+
+
+
+
+end;
+
+end.
