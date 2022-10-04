@@ -1,3 +1,13 @@
+{
+*35.2 Faça um algoritmo que calcule o valor da conta de luz de uma pessoa.
+Sabe-se que o cálculo da conta de luz segue a tabela abaixo:
+  Tipo de Cliente Valor do KW/h
+    a. (Residência) 0,60
+    b. (Comércio) 0,48
+    c. (Indústria) 1,29
+	  d. (Fazenda) 2,18
+}
+
 unit Unit1;
 
 interface
@@ -7,14 +17,15 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TConsumidor = (opResidencia, opComercio, opIndustria);
-  TForm1 = class(TForm)
+  TConsumidor = (opResidencia, opComercio, opIndustria, opFazenda);
+  TFormConsumoEnergia = class(TForm)
     Label1: TLabel;
     edtConsumo: TEdit;
     RGTipo: TRadioGroup;
     Label2: TLabel;
     lblTotal: TLabel;
     btnConta: TButton;
+    lb_kwh: TLabel;
     procedure btnContaClick(Sender: TObject);
   private
     { Private declarations }
@@ -25,43 +36,50 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormConsumoEnergia: TFormConsumoEnergia;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.btnContaClick(Sender: TObject);
+procedure TFormConsumoEnergia.btnContaClick(Sender: TObject);
 begin
   valorConta;
 end;
 
-function TForm1.calculaConta(pConsumo, pTipo: double): double;
+function TFormConsumoEnergia.calculaConta(pConsumo, pTipo: double): double;
 begin
   Result := pConsumo * pTipo;
 end;
 
-procedure TForm1.valorConta;
+procedure TFormConsumoEnergia.valorConta;
 var
-  xConsumo: double;
-  xTipo: double;
-  xValor: double;
+  xConsumo, xTipo, xValor, xDesconto : Double;
+  xInfoDesconto : String;
 begin
   xConsumo := strToFloat(edtConsumo.text);
 
   case TConsumidor(RGTipo.ItemIndex) of
+
   opResidencia:
   begin
     xTipo := 0.60;
   end;
+
   opComercio:
   begin
     xTipo := 0.48;
   end;
+
   opIndustria:
   begin
     xTipo := 1.29;
   end;
+
+  opFazenda:
+  begin
+    xTipo := 2.18;
+  end
 
   else
     showMessage('Selecione o tipo de consumidor');
@@ -70,7 +88,18 @@ begin
 
   xValor := calculaConta(xConsumo,xTipo);
 
-  lblTotal.caption := formatFloat('R$ 0.00',xValor);
+  xInfoDesconto := AnsiUpperCase(InputBox('Informe', 'Cliente possui desconto? s/n', ''));
+  if xInfoDesconto.Equals('S') then
+  begin
+    xDesconto := StrToFloat(InputBox('Valor Desconto','Informe o valor de desconto: ', ''));
+    xValor := (xValor - xDesconto);
+    lblTotal.caption := formatFloat('R$ 0.00',xValor);
+  end
+
+  else if xInfoDesconto.Equals('N') then
+  begin
+    lblTotal.caption := formatFloat('R$ 0.00',xValor);
+  end;
 end;
 
 end.
