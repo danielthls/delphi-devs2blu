@@ -56,6 +56,13 @@ procedure TFormConsumoEnergia.valorConta;
 var
   xConsumo, xTipo, xValor, xDesconto : Double;
   xInfoDesconto : String;
+
+const
+
+cResidencia = 0.80;
+cComercio = 0.68;
+cIndustria = 1.49;
+cFazenda = 3.18;
 begin
   xConsumo := strToFloat(edtConsumo.text);
 
@@ -63,22 +70,22 @@ begin
 
   opResidencia:
   begin
-    xTipo := 0.60;
+    xTipo := cResidencia;
   end;
 
   opComercio:
   begin
-    xTipo := 0.48;
+    xTipo := cComercio;
   end;
 
   opIndustria:
   begin
-    xTipo := 1.29;
+    xTipo := cIndustria;
   end;
 
   opFazenda:
   begin
-    xTipo := 2.18;
+    xTipo := cFazenda;
   end
 
   else
