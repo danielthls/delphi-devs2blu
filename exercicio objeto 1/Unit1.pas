@@ -28,11 +28,13 @@ type
     lblTriangulo2: TLabel;
     lblResultado: TLabel;
     procedure btnCalcularClick(Sender: TObject);
+    procedure btnCalcularOBJClick(Sender: TObject);
   private
     { Private declarations }
     function calculaP (pLadoA, pLadoB, pLadoC: double): double;
     function calculaArea (pPerimetro, pLadoA, pLadoB, pLadoC: double): Extended;
     procedure escreveResultado;
+    procedure calculaAreaOOP;
   public
     { Public declarations }
   end;
@@ -42,6 +44,9 @@ var
 
 implementation
 
+uses
+  UTriangulo;
+
 {$R *.dfm}
 
 procedure TForm1.btnCalcularClick(Sender: TObject);
@@ -49,10 +54,55 @@ begin
   escreveResultado;
 end;
 
+procedure TForm1.btnCalcularOBJClick(Sender: TObject);
+begin
+  calculaAreaOOP;
+end;
+
 function TForm1.calculaArea(pPerimetro, pLadoA, pLadoB, pLadoC: double): Extended;
 begin
   Result := Sqrt(pPerimetro * (pPerimetro - pLadoA) * (pPerimetro - pLadoB)
                       * (pPerimetro - pLadoC));
+
+end;
+
+procedure TForm1.calculaAreaOOP;
+var
+  xTrianguloX: TTriangulo;
+  xTrianguloY: TTriangulo;
+
+  xAreaX: Double;
+  xAreaY: Double;
+begin
+  xTrianguloX := TTriangulo.Create;
+  xTrianguloY := TTriangulo.Create;
+
+  try
+    //Primeiro Triangulo
+    xTrianguloX.a := StrToFloatDef(edtTriangulo1A.text, 0);
+    xTrianguloX.b := StrToFloatDef(edtTriangulo1B.text, 0);
+    xTrianguloX.c := StrToFloatDef(edtTriangulo1C.text, 0);
+
+    xAreaX := xTrianguloX.Area;
+
+    xTrianguloY.a := StrToFloatDef(edtTriangulo2A.text, 0);
+    xTrianguloY.b := StrToFloatDef(edtTriangulo2B.text, 0);
+    xTrianguloY.c := StrToFloatDef(edtTriangulo2C.text, 0);
+
+    xAreaY := xTrianguloY.Area;
+
+    lblTriangulo1.caption := 'Triângulo 1 Área: ' + formatfloat('0.00',xAreaX);
+    lblTriangulo2.caption := 'Triângulo 2 Área: ' + formatfloat('0.00',xAreaY);
+
+    if (xAreaX > xAreaY) then
+       lblResultado.caption := 'A área do triângulo 1 é maior'
+    else
+       lblResultado.caption := 'A área do triângulo 2 é maior';
+
+  finally
+    FreeAndNil(xTrianguloX);
+    FreeAndNil(xTrianguloY);
+  end;
 
 end;
 
