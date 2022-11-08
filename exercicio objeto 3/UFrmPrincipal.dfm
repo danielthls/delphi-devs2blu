@@ -1,0 +1,94 @@
+object frmPessoa: TfrmPessoa
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de pessoa'
+  ClientHeight = 260
+  ClientWidth = 290
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 16
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object lblCPFCNPJ: TLabel
+    Left = 24
+    Top = 64
+    Width = 19
+    Height = 13
+    Caption = 'CPF'
+  end
+  object lblEndereco: TLabel
+    Left = 24
+    Top = 120
+    Width = 45
+    Height = 13
+    Caption = 'Endere'#231'o'
+  end
+  object lblIdadeIE: TLabel
+    Left = 24
+    Top = 176
+    Width = 28
+    Height = 13
+    Caption = 'Idade'
+  end
+  object RGTipo: TRadioGroup
+    Left = 176
+    Top = 16
+    Width = 73
+    Height = 61
+    Caption = 'Pessoa'
+    ItemIndex = 0
+    Items.Strings = (
+      'F'#237'sica'
+      'Jur'#237'dica')
+    TabOrder = 0
+    OnClick = RGTipoClick
+  end
+  object edtNome: TEdit
+    Left = 24
+    Top = 35
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object edtCpfCnpj: TEdit
+    Left = 24
+    Top = 83
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtEndereco: TEdit
+    Left = 24
+    Top = 139
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object edtIdadeIE: TEdit
+    Left = 24
+    Top = 195
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object tbnGravar: TButton
+    Left = 174
+    Top = 164
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    TabOrder = 5
+    OnClick = tbnGravarClick
+  end
+end

@@ -1,0 +1,127 @@
+unit UPessoa;
+
+interface
+
+type
+
+  TPessoa = class
+    private
+      fNome: String;
+      fEndereco: String;
+    function getEndereco: string;
+    function getNome: string;
+    procedure setEndereco(const Value: string);
+    procedure setNome(const Value: string);
+    public
+      function gravar(aPessoa: TPessoa): string; virtual; abstract;
+      property nome: string read getNome write setNome;
+      property endereco: string read getEndereco write setEndereco;
+  end;
+
+  TPessoaFisica = class(TPessoa)
+    private
+      fCPF: String;
+      fIdade: byte;
+    function getCPF: string;
+    function getIdade: byte;
+    procedure setCPF(const Value: string);
+    procedure setIdade(const Value: byte);
+    public
+      property CPF: string read getCPF write setCPF;
+      property Idade: byte read getIdade write setIdade;
+      function validaCPF: boolean;
+  end;
+
+  tPessoaJuridica = class(TPessoa)
+    private
+      fCNPJ: String;
+      fIE: String;
+    function getCNPJ: String;
+    function getIE: String;
+    procedure setCNPJ(const Value: String);
+    procedure setIE(const Value: String);
+    public
+      property CNPJ: String read getCNPJ write setCNPJ;
+      property IE: String read getIE write setIE;
+      function validaCNPJ: boolean;
+  end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.getEndereco: string;
+begin
+  Result := fEndereco;
+end;
+
+function TPessoa.getNome: string;
+begin
+  Result := fNome;
+end;
+
+procedure TPessoa.setEndereco(const Value: string);
+begin
+  fEndereco := Value;
+end;
+
+procedure TPessoa.setNome(const Value: string);
+begin
+  fNome := Value;
+end;
+
+{ TPessoaFisica }
+
+function TPessoaFisica.getCPF: string;
+begin
+  Result := fCPF;
+end;
+
+function TPessoaFisica.getIdade: byte;
+begin
+  Result := fIdade;
+end;
+
+procedure TPessoaFisica.setCPF(const Value: string);
+begin
+  fCPF := Value;
+end;
+
+procedure TPessoaFisica.setIdade(const Value: byte);
+begin
+  fIdade := Value;
+end;
+
+function TPessoaFisica.validaCPF: boolean;
+begin
+
+end;
+
+{ tPessoaJuridica }
+
+function tPessoaJuridica.getCNPJ: String;
+begin
+  Result := fCNPJ;
+end;
+
+function tPessoaJuridica.getIE: String;
+begin
+  Result := fIE;
+end;
+
+procedure tPessoaJuridica.setCNPJ(const Value: String);
+begin
+  fCNPJ := Value;
+end;
+
+procedure tPessoaJuridica.setIE(const Value: String);
+begin
+  fIE := Value;
+end;
+
+function tPessoaJuridica.validaCNPJ: boolean;
+begin
+
+end;
+
+end.

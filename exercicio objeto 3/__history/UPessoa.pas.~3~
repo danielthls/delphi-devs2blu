@@ -1,0 +1,180 @@
+unit UPessoa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils;
+
+type
+
+  TPessoa = class
+    private
+      fNome: String;
+      fEndereco: String;
+    function getEndereco: string;
+    function getNome: string;
+    procedure setEndereco(const Value: string);
+    procedure setNome(const Value: string);
+    public
+      function gravar(aPessoa: TPessoa): string; virtual; abstract;
+      property nome: string read getNome write setNome;
+      property endereco: string read getEndereco write setEndereco;
+  end;
+
+  TPessoaFisica = class(TPessoa)
+    private
+      fCPF: String;
+      fIdade: byte;
+    function getCPF: string;
+    function getIdade: byte;
+    procedure setCPF(const Value: string);
+    procedure setIdade(const Value: byte);
+    public
+      property CPF: string read getCPF write setCPF;
+      property Idade: byte read getIdade write setIdade;
+      function validaCPF(textoCPF: string): boolean;
+  end;
+
+  tPessoaJuridica = class(TPessoa)
+    private
+      fCNPJ: String;
+      fIE: String;
+    function getCNPJ: String;
+    function getIE: String;
+    procedure setCNPJ(const Value: String);
+    procedure setIE(const Value: String);
+    public
+      property CNPJ: String read getCNPJ write setCNPJ;
+      property IE: String read getIE write setIE;
+      function validaCNPJ: boolean;
+  end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.getEndereco: string;
+begin
+  Result := fEndereco;
+end;
+
+function TPessoa.getNome: string;
+begin
+  Result := fNome;
+end;
+
+procedure TPessoa.setEndereco(const Value: string);
+begin
+  fEndereco := Value;
+end;
+
+procedure TPessoa.setNome(const Value: string);
+begin
+  fNome := Value;
+end;
+
+{ TPessoaFisica }
+
+function TPessoaFisica.getCPF: string;
+begin
+  Result := fCPF;
+end;
+
+function TPessoaFisica.getIdade: byte;
+begin
+  Result := fIdade;
+end;
+
+procedure TPessoaFisica.setCPF(const Value: string);
+begin
+  fCPF := Value;
+end;
+
+procedure TPessoaFisica.setIdade(const Value: byte);
+begin
+  fIdade := Value;
+end;
+
+function TPessoaFisica.validaCPF(textoCPF: string): boolean;
+var n1,n2,n3,n4,n5,n6,n7,n8,n9: integer;
+
+   	d1,d2: integer;
+
+   	digitado, calculado: string;
+
+begin
+
+   n1:=StrToInt(textoCPF[1]);
+
+   n2:=StrToInt(textoCPF[2]);
+
+   n3:=StrToInt(textoCPF[3]);
+
+   n4:=StrToInt(textoCPF[5]);
+
+   n5:=StrToInt(textoCPF[6]);
+
+   n6:=StrToInt(textoCPF[7]);
+
+   n7:=StrToInt(textoCPF[9]);
+
+   n8:=StrToInt(textoCPF[10]);
+
+   n9:=StrToInt(textoCPF[11]);
+
+                 	d1:=n9*2+n8*3+n7*4+n6*5+n5*6+n4*7+n3*8+n2*9+n1*10;
+
+  d1:=11-(d1 mod 11);
+
+   if d1>=10 then d1:=0;
+
+    	d2:=d1*2+n9*3+n8*4+n7*5+n6*6+n5*7+n4*8+n3*9+n2*10+n1*11;
+
+	d2:=11-(d2 mod 11);
+
+	if d2>=10 then
+
+   	d2:=0;
+
+	calculado:=inttostr(d1)+inttostr(d2);
+
+   digitado:=textoCPF[13]+textoCPF[14];
+
+   if calculado=digitado then
+
+   	Result:=true
+
+   else
+
+   	Result:=false;
+
+end;
+
+{ tPessoaJuridica }
+
+function tPessoaJuridica.getCNPJ: String;
+begin
+  Result := fCNPJ;
+end;
+
+function tPessoaJuridica.getIE: String;
+begin
+  Result := fIE;
+end;
+
+procedure tPessoaJuridica.setCNPJ(const Value: String);
+begin
+  fCNPJ := Value;
+end;
+
+procedure tPessoaJuridica.setIE(const Value: String);
+begin
+  fIE := Value;
+end;
+
+function tPessoaJuridica.validaCNPJ: boolean;
+begin
+
+end;
+
+end.

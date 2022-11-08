@@ -1,0 +1,29 @@
+unit UPorta;
+
+interface
+type
+
+Tporta = class
+
+  Private
+    fCor: String;
+    fAltura: Double;
+    fMacaneta: String;
+    fMaterial: String;
+    fFechadura: String;
+    fTrancada: Boolean;
+  Public
+    procedure Abrir;
+    procedure Fechar;
+    procedure Trancar;
+    procedure Destrancar;
+    property Cor: String read getCor write setCor;
+    property Altura: Double read getAltura write setAltura;
+    property Macaneta: String read getMacaneta write setMacaneta;
+
+end;
+
+
+implementation
+
+end.

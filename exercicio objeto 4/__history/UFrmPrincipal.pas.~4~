@@ -1,0 +1,52 @@
+unit UFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UCombustivel;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    lblTipo: TLabel;
+    lblValor: TLabel;
+    lblQtd: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    xCombustivel : TBombaCombustivel;
+    procedure atualizaDados;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.atualizaDados;
+begin
+  lblTipo.Caption := xCombustivel.TipoCombustivel;
+  lblValor.Caption := formatFloat('R$ 0.00',xCombustivel.ValorLitro);
+  lblQtd.Caption := formatFloat('0.00',xCombustivel.QtdCombustivel);
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(xCombustivel);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  xCombustivel.Create;
+  atualizaDados;
+end;
+
+end.

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/05 21:21:44.000.438,=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:15:20.000.131,=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:15:59.000.287,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\uFrmPrincipal.pas=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:15:59.000.287,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\uFrmPrincipal.dfm=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/31 20:16:19.000.194,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\SistemaCadProduto.dproj=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/31 21:04:38.000.634,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:05:10.000.433,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UdmPedidos.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:05:10.000.433,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UdmPedidos.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit1.dfm</Transaction>
+    <Transaction>2022/10/31 21:25:57.000.109,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/10/31 21:26:16.000.608,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmCompradores.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/10/31 21:26:16.000.608,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmCompradores.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.dfm</Transaction>
+    <Transaction>2022/11/01 18:41:34.000.411,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/11/01 18:41:59.000.030,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmFornecedores.pas</Transaction>
+    <Transaction>2022/11/01 18:41:59.000.030,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmFornecedores.dfm</Transaction>
+    <Transaction>2022/11/01 19:05:57.000.773,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/11/01 19:06:19.000.117,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmMedida.pas</Transaction>
+    <Transaction>2022/11/01 19:06:19.000.117,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmMedida.dfm</Transaction>
+    <Transaction>2022/11/01 19:07:51.000.197,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmMedida.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmUnidadeMedida.pas</Transaction>
+    <Transaction>2022/11/01 19:07:51.000.197,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmMedida.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmUnidadeMedida.dfm</Transaction>
+    <Transaction>2022/11/01 19:21:36.000.947,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/11/01 19:22:12.000.486,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmProdutos.pas</Transaction>
+    <Transaction>2022/11/01 19:22:12.000.486,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmProdutos.dfm</Transaction>
+    <Transaction>2022/11/01 20:07:23.000.684,=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas</Transaction>
+    <Transaction>2022/11/01 20:09:33.000.191,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.pas=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmPedidos.pas</Transaction>
+    <Transaction>2022/11/01 20:09:33.000.191,C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\Unit2.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\Exercicio 31-10-2022\SISTEMA CRUD - CAD PRODUTOS\UfrmPedidos.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

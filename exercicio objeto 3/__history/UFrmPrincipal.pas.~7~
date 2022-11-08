@@ -1,0 +1,109 @@
+unit UFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UPessoa;
+
+type
+  NPessoa = (NPFisica, NPJuridica);
+  TfrmPessoa = class(TForm)
+    RGTipo: TRadioGroup;
+    Label1: TLabel;
+    edtNome: TEdit;
+    lblCPFCNPJ: TLabel;
+    edtCpfCnpj: TEdit;
+    lblEndereco: TLabel;
+    edtEndereco: TEdit;
+    lblIdadeIE: TLabel;
+    edtIdadeIE: TEdit;
+    tbnGravar: TButton;
+    procedure RGTipoClick(Sender: TObject);
+    procedure tbnGravarClick(Sender: TObject);
+  private
+    { Private declarations }
+
+    xPessoa: TPessoa;
+    xPessoaJuridica: TpessoaJuridica;
+    xPessoaFisica: TpessoaFisica;
+    procedure mudaPessoa;
+    procedure gravar;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPessoa: TfrmPessoa;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPessoa.gravar;
+var
+  xPessoa: TPessoa;
+begin
+  try
+    case NPessoa (rgTipo.itemIndex) of
+      NPFisica:
+        xPessoa:= TPessoaFisica.Create;
+      NPJuridica:
+        xPessoa:= TPessoaJuridica.Create;
+      end;
+
+    if xPessoa.valida(edtCpfCnpj.text) = true then
+    begin
+      xPessoa.nome := edtNome.text;
+      xPessoa.endereco := edtEndereco.text;
+      if xPessoa is TPessoaFisica then
+      begin
+        TPessoaFisica(xPessoa).CPF := edtCpfCnpj.text;
+        TPessoaFisica(xPessoa).Idade := strToInt(edtIdadeIE.text);
+      end
+      else
+      begin
+        tPessoaJuridica(xPessoa).CNPJ := edtCpfCnpj.text;
+        tPessoaJuridica(xPessoa).IE := edtIdadeIE.text;
+      end;
+
+      xPessoa.gravar;
+    end
+    else
+    begin
+      showMessage('CPF/CNPJ inválido');
+      exit;
+    end;
+  finally
+    freeAndNil(xPessoa);
+  end;
+end;
+
+procedure TfrmPessoa.mudaPessoa;
+begin
+  case NPessoa (rgTipo.itemIndex) of
+    NPFisica:
+    begin
+      lblCPFCNPJ.Caption := 'CPF';
+      lblIdadeIE.Caption := 'Idade';
+    end;
+
+    NPJuridica:
+    begin
+      lblCPFCNPJ.Caption := 'CNPJ';
+      lblIdadeIE.Caption := 'Inscrição Estadual';
+    end;
+  end;
+end;
+
+procedure TfrmPessoa.RGTipoClick(Sender: TObject);
+begin
+  mudaPessoa;
+end;
+
+procedure TfrmPessoa.tbnGravarClick(Sender: TObject);
+begin
+  GRAVAR;
+end;
+
+end.

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/21 18:01:30.000.975,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 18:03:56.000.311,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Elevador.dproj</Transaction>
+    <Transaction>2022/10/21 18:04:07.000.274,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/21 18:04:07.000.274,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/21 18:04:11.000.063,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 18:04:17.000.147,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UElevador.pas</Transaction>
+    <Transaction>2022/10/21 18:38:55.000.324,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UElevador.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objet 7\UElevador.pas</Transaction>
+    <Transaction>2022/10/21 18:38:56.000.940,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objet 7\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/21 18:38:56.000.940,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objet 7\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/21 18:39:00.000.776,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Elevador.dproj=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objet 7\Elevador.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

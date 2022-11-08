@@ -1,0 +1,124 @@
+unit UCombustivel;
+
+interface
+
+type
+TBombaCombustivel = class
+  private
+    fTipoCombustivel: string;
+    fValorLitro: double;
+    fQtdCombustivel: double;
+    function getQtdCombustivel: double;
+    function getTipoCombustivel: string;
+    function getValorLitro: double;
+    procedure setQtdCombustivel(const Value: double);
+    procedure setTipoCombustivel(const Value: string);
+    procedure setValorLitro(const Value: double);
+  public
+
+    property TipoCombustivel: string read getTipoCombustivel write setTipoCombustivel;
+    property ValorLitro: double read getValorLitro write setValorLitro;
+    property QtdCombustivel: double read getQtdCombustivel write setQtdCombustivel;
+    function abastecerPorValor(pValor: double): double;
+    function abastecerPorLitro(pLitro: double): double;
+    procedure alteraValor(pValorAtualizado: double);
+    procedure alteraTipoCombustivel(pTipoAtualizado: string);
+    procedure alteraQtdCombustivel(pQtdAtualizado: double);
+    procedure atualizaQtdCombustivel(pQtd: double);
+    function checaValor(pValor: double): boolean;
+    constructor create;
+end;
+implementation
+
+uses
+  System.SysUtils;
+
+{ BombaCombustivel }
+
+function TBombaCombustivel.abastecerPorLitro(pLitro: double): double;
+begin
+  checaValor(pLitro);
+  atualizaQtdCombustivel(-pLitro);
+  Result := (pLitro * ValorLitro);
+end;
+
+function TBombaCombustivel.abastecerPorValor(pValor: double): double;
+var
+  xQtdLitros: double;
+begin
+  checaValor(pValor);
+  xQtdLitros := pValor / fValorLitro;
+  atualizaQtdCombustivel(-xQtdLitros);
+  Result := xQtdLitros;
+end;
+
+procedure TBombaCombustivel.atualizaQtdCombustivel(pQtd: double);
+begin
+  if (fQtdCombustivel + pQtd > 0) then
+    fQtdCombustivel := fQtdCombustivel + pQtd
+  else
+    raise Exception.Create('Combustível insuficiente');
+
+end;
+
+procedure TBombaCombustivel.alteraQtdCombustivel(pQtdAtualizado: double);
+begin
+  fQtdCombustivel := pQtdAtualizado;
+end;
+
+procedure TBombaCombustivel.alteraTipoCombustivel(pTipoAtualizado: string);
+begin
+  fTipoCombustivel := pTipoAtualizado;
+end;
+
+procedure TBombaCombustivel.alteraValor(pValorAtualizado: double);
+begin
+  fValorLitro := pValorAtualizado;
+end;
+
+function TBombaCombustivel.checaValor(pValor: double): boolean;
+begin
+  if pValor <= 0 then
+    raise Exception.Create('Valor Negativo')
+  else
+    Result := true;
+end;
+
+constructor TBombaCombustivel.create;
+begin
+  fTipoCombustivel := 'Gasolina';
+  fQtdCombustivel := 300;
+  fValorLitro := 5.32;
+end;
+
+function TBombaCombustivel.getQtdCombustivel: double;
+begin
+  Result := fQtdCombustivel;
+end;
+
+function TBombaCombustivel.getTipoCombustivel: string;
+begin
+  Result := fTipoCombustivel;
+end;
+
+function TBombaCombustivel.getValorLitro: double;
+begin
+  Result := fValorLitro;
+end;
+
+procedure TBombaCombustivel.setQtdCombustivel(const Value: double);
+begin
+  fQtdCombustivel := Value;
+end;
+
+procedure TBombaCombustivel.setTipoCombustivel(const Value: string);
+begin
+  fTipoCombustivel := Value;
+end;
+
+procedure TBombaCombustivel.setValorLitro(const Value: double);
+begin
+  fValorLitro := Value;
+end;
+
+end.

@@ -1,0 +1,123 @@
+unit UElevador;
+
+interface
+
+uses
+  System.SysUtils;
+{Crie uma classe denominada Elevador para armazenar as informações de um elevador
+ dentro de um prédio. A classe deve armazenar o andar atual (térreo = 0), total
+ de andares no prédio (desconsiderando o térreo), capacidade do elevador e
+ quantas pessoas estão presentes nele. A classe deve também disponibilizar os
+ seguintes métodos:
+
+   a.	Inicializa: que deve receber como parâmetros a capacidade do elevador e o
+total de andares no prédio (os elevadores sempre começam no térreo e vazio - usar o constructor);
+   b.	Entra: para acrescentar uma pessoa no elevador (só deve acrescentar se
+ainda houver espaço);
+   c.	Sai: para remover uma pessoa do elevador (só deve remover se houver alguém
+dentro dele);
+   d.	Sobe: para subir um andar (não deve subir se já estiver no último andar);
+   e.	Desce: para descer um andar (não deve descer se já estiver no térreo);}
+type
+  TElevador = class
+    private
+      fCapacidadePessoas: Integer;
+      fTotalAndares: Integer;
+      fNPessoas: Integer;
+      fNAndar: Integer;
+    function getCapacidadePessoas: Integer;
+    function getNAndar: Integer;
+    function getNPessoas: Integer;
+    public
+      property CapacidadePessoas: integer read getCapacidadePessoas;
+      property TotalAndares: Integer read getCapacidadePessoas;
+      property NPessoas: Integer read getNPessoas;
+      property NAndar: Integer read getNAndar;
+      constructor Create(const aTotalAndares, aCapacidadePessoas: Integer; const
+                          aPessoas: integer = 0; aAndar: Integer = 0);
+      Function Entra(pPessoasEntrando: Integer): Integer;
+      Function Sai(pPessoasSaindo: Integer): Integer;
+      Function Sobe(pAndarDestino: Integer): Integer;
+      Function Desce(pAndarDestino: Integer): Integer;
+      Function ChecaAndar(pAndarAtual, pAndarDestino: Integer): Boolean;
+      Function ChecaPessoas(pNPessoasDentro, pNPessoasEntrandoSaindo: Integer): Boolean;
+  end;
+
+
+
+implementation
+
+{ TElevador }
+
+function TElevador.ChecaAndar(pAndarAtual, pAndarDestino: Integer): Boolean;
+begin
+  if ((PAndarAtual = fTotalAndares) and (pAndarDestino > pAndarAtual)) then
+    raise Exception.Create('Erro. O elevador já está no último andar e não pode'
+                           + ' subir mais.')
+  else if ((PAndarAtual = 0) and (pAndarDestino <= pAndarAtual)) then
+    raise Exception.Create('Erro. O elevaodr já está no térreo e não pode'
+                           + 'descer mais.')
+  else
+    Result := true;
+end;
+
+function TElevador.ChecaPessoas(pNPessoasDentro, pNPessoasEntrandoSaindo: Integer): Boolean;
+begin
+  if ((pNPessoasDentro = fCapacidadePessoas) and (pNPessoasEntrandoSaindo > 0)) then
+    raise Exception.Create('Erro. O elevador já está em sua capacidade máxima.'
+                           + ' Não é possível adicionar mais pessoas.')
+  else if ((pNPessoasDentro = 0) and (pNPessoasEntrandoSaindo <= 0)) then
+    raise Exception.Create('Erro. O elevador já está vazio. Não é possível ramover'
+                           + ' pessoas.');
+
+end;
+
+constructor TElevador.Create(const aTotalAndares, aCapacidadePessoas,
+  aPessoas: integer; aAndar: Integer);
+begin
+  fTotalAndares := aTotalAndares;
+  fCapacidadePessoas := aCapacidadePessoas;
+  fNPessoas := aPessoas;
+  fNAndar := aAndar;
+end;
+
+function TElevador.Desce(pAndarDestino: Integer): Integer;
+begin
+  ChecaAndar(fNAndar, pAndarDestino);
+  fNAndar := pAndarDestino;
+end;
+
+function TElevador.Entra(pPessoasEntrando: Integer): Integer;
+begin
+  ChecaPessoas(fNPessoas,pPessoasEntrando);
+  fNPessoas := fNPessoas + pPessoasEntrando;
+end;
+
+function TElevador.getCapacidadePessoas: Integer;
+begin
+  Result := fCapacidadePessoas;
+end;
+
+function TElevador.getNAndar: Integer;
+begin
+  Result := fNAndar;
+end;
+
+function TElevador.getNPessoas: Integer;
+begin
+  Result := fNPessoas;
+end;
+
+function TElevador.Sai(pPessoasSaindo: Integer): Integer;
+begin
+  ChecaPessoas(fNPessoas, -pPessoasSaindo);
+  fNPessoas := fNPessoas - pPessoasSaindo;
+end;
+
+function TElevador.Sobe(pAndarDestino: Integer): Integer;
+begin
+  ChecaAndar(fNAndar, pAndarDestino);
+  fNAndar := pAndarDestino;
+end;
+
+end.

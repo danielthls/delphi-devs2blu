@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/11 21:09:11.000.458,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/11 21:09:19.000.701,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:09:48.000.452,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 3\UPessoa.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:10:01.000.653,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 3\UFrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/11 21:10:01.000.653,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 3\UFrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/11 21:10:14.000.158,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 3\Pessoa.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

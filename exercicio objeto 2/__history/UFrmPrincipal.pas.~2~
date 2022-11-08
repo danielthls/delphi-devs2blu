@@ -1,0 +1,87 @@
+unit UFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UContaCorrente;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    lblNome: TLabel;
+    Label2: TLabel;
+    lblNumeroConta: TLabel;
+    Label3: TLabel;
+    lblSaldo: TLabel;
+    btnAlteraNome: TButton;
+    btnDeposito: TButton;
+    btnSaque: TButton;
+    btnNovaConta: TButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure btnNovaContaClick(Sender: TObject);
+  private
+    { Private declarations }
+    FContaCorrente : TContaCorrente;
+    procedure AlteraNome;
+    procedure Deposito;
+    procedure Saque;
+    procedure NovaConta;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.AlteraNome;
+begin
+
+end;
+
+procedure TForm1.btnNovaContaClick(Sender: TObject);
+begin
+  NovaConta;
+end;
+
+procedure TForm1.Deposito;
+begin
+
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(FContaCorrente);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FContaCorrente :=  TContaCorrente.Create;
+end;
+
+procedure TForm1.NovaConta;
+begin
+  FContaCorrente.Nome := InputBox('Nome','Insira o nome do titular da conta','Nome');
+  FContaCorrente.NumeroConta := strToInt(InputBox('Número da conta','Insira o número da conta','1'));
+  FContaCorrente.Saldo := strToFloat(InputBox('Saldo','Insira o saldo atual','0'));
+
+  lblNome.Caption := FContaCorrente.Nome;
+  lblNumeroConta.Caption := intToStr(FContaCorrente.NumeroConta);
+  lblSaldo.Caption := formatFloat('R$ 0.00',FContaCorrente.Saldo);
+
+  lblNome.Visible := true;
+  lblNumeroConta.Visible := true;
+  lblSaldo.Visible := true;
+end;
+
+procedure TForm1.Saque;
+begin
+
+end;
+
+end.

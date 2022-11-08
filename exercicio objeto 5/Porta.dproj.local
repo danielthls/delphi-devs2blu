@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/18 21:37:12.000.572,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 21:37:27.000.671,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/18 21:37:33.000.907,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPorta.pas</Transaction>
+    <Transaction>2022/10/18 21:55:23.000.857,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/18 21:55:23.000.857,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/18 21:55:33.000.533,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Porta.dproj</Transaction>
+    <Transaction>2022/10/18 21:55:50.000.838,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPorta.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 5\UPorta.pas</Transaction>
+    <Transaction>2022/10/18 21:55:51.000.822,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 5\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/18 21:55:51.000.822,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 5\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/18 21:55:52.000.755,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Porta.dproj=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 5\Porta.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

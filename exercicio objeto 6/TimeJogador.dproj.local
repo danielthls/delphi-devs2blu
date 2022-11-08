@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/10/19 19:39:00.002,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:39:16.424,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\TimeJogador.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/19 19:39:27.024,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/19 19:39:27.024,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:39:32.725,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:39:42.393,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UTimeJogador.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:45:26.415,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UTime.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UTimeJogador.pas</Transaction>
+    <Transaction>2022/10/19 19:45:32.633,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:45:40.475,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UJogador.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 19:50:45.943,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 6\UTime.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UTime.pas</Transaction>
+    <Transaction>2022/10/19 19:50:47.408,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 6\UJogador.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UJogador.pas</Transaction>
+    <Transaction>2022/10/19 19:50:48.441,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 6\UFrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/19 19:50:48.441,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 6\UFrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/19 19:50:50.884,C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 6\TimeJogador.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\TimeJogador.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,153 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 318
+  ClientWidth = 270
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 37
+    Width = 33
+    Height = 13
+    Caption = 'Lado A'
+  end
+  object Label2: TLabel
+    Left = 104
+    Top = 37
+    Width = 32
+    Height = 13
+    Caption = 'Lado B'
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 18
+    Width = 53
+    Height = 13
+    Caption = 'Tri'#226'ngulo 1'
+  end
+  object Label4: TLabel
+    Left = 176
+    Top = 37
+    Width = 33
+    Height = 13
+    Caption = 'Lado C'
+  end
+  object Label5: TLabel
+    Left = 24
+    Top = 104
+    Width = 53
+    Height = 13
+    Caption = 'Tri'#226'ngulo 2'
+  end
+  object Label6: TLabel
+    Left = 24
+    Top = 123
+    Width = 33
+    Height = 13
+    Caption = 'Lado A'
+  end
+  object Label7: TLabel
+    Left = 104
+    Top = 123
+    Width = 32
+    Height = 13
+    Caption = 'Lado B'
+  end
+  object Label8: TLabel
+    Left = 176
+    Top = 123
+    Width = 33
+    Height = 13
+    Caption = 'Lado C'
+  end
+  object lblTriangulo1: TLabel
+    Left = 24
+    Top = 248
+    Width = 83
+    Height = 13
+    Caption = 'Tri'#226'ngulo 1 '#193'rea:'
+  end
+  object lblTriangulo2: TLabel
+    Left = 24
+    Top = 267
+    Width = 79
+    Height = 13
+    Caption = 'Tri'#226'ngulo 2 '#193'rea'
+  end
+  object lblResultado: TLabel
+    Left = 24
+    Top = 286
+    Width = 105
+    Height = 13
+    Caption = 'Compara'#231#227'o de '#225'reas'
+  end
+  object edtTriangulo1A: TEdit
+    Left = 24
+    Top = 56
+    Width = 49
+    Height = 21
+    TabOrder = 0
+  end
+  object edtTriangulo1B: TEdit
+    Left = 104
+    Top = 56
+    Width = 49
+    Height = 21
+    TabOrder = 1
+  end
+  object edtTriangulo1C: TEdit
+    Left = 176
+    Top = 56
+    Width = 49
+    Height = 21
+    TabOrder = 2
+  end
+  object edtTriangulo2A: TEdit
+    Left = 24
+    Top = 142
+    Width = 49
+    Height = 21
+    TabOrder = 3
+  end
+  object edtTriangulo2B: TEdit
+    Left = 104
+    Top = 142
+    Width = 49
+    Height = 21
+    TabOrder = 4
+  end
+  object edtTriangulo2C: TEdit
+    Left = 176
+    Top = 142
+    Width = 49
+    Height = 21
+    TabOrder = 5
+  end
+  object btnCalcular: TButton
+    Left = 24
+    Top = 192
+    Width = 75
+    Height = 25
+    Caption = 'Calcular'
+    TabOrder = 6
+    OnClick = btnCalcularClick
+  end
+  object btnCalcularOBJ: TButton
+    Left = 150
+    Top = 192
+    Width = 75
+    Height = 25
+    Caption = 'Calcular OBJ'
+    TabOrder = 7
+    OnClick = btnCalcularOBJClick
+  end
+end

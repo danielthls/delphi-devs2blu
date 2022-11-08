@@ -1,0 +1,67 @@
+unit UfrmPedidos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.StdCtrls, Vcl.Mask;
+
+type
+  TfrmPedidos = class(TForm)
+    DBNavigator1: TDBNavigator;
+    DataSource1: TDataSource;
+    FDTable1: TFDTable;
+    FDTableComprador: TFDTable;
+    DS_Comprador: TDataSource;
+    DS_Fornecedor: TDataSource;
+    FDTableFornecedor: TFDTable;
+    FDTable1Id: TFDAutoIncField;
+    FDTable1Numero: TLongWordField;
+    FDTable1DataPedido: TDateField;
+    FDTable1idComprador: TLongWordField;
+    FDTable1idFornecedor: TLongWordField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    DBLookupComboBoxComprador: TDBLookupComboBox;
+    DBLookupComboBoxFornecedor: TDBLookupComboBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPedidos: TfrmPedidos;
+
+implementation
+
+{$R *.dfm}
+
+uses UdmPedidos;
+
+procedure TfrmPedidos.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  FDTable1.Close;
+
+  frmPedidos:= nil;
+end;
+
+procedure TfrmPedidos.FormCreate(Sender: TObject);
+begin
+  FDTable1.Open;
+end;
+
+end.

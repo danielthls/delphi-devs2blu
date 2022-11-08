@@ -1,0 +1,44 @@
+unit UAnimais;
+
+interface
+
+type
+  TEnumAnimal = (stCachorro, stGato, stPassaro);
+
+  TAnimal = class // Classe abstrata ou classe base
+  private
+    FPatas: Byte;
+
+    function GetPatas: Byte;
+    procedure SetPatas(const aValue: Byte);
+
+  public
+    // Método Abstrato
+    function RetornarSom: String; virtual; abstract;
+    property Patas: Byte read GetPatas write SetPatas;
+  end;
+
+  TCachorro = class(TAnimal)
+  private
+  public
+    constructor Create;
+    function RetornarSom: String; override;
+  end;
+
+  TGato = class(TAnimal)
+  private
+  public
+    constructor Create;
+    function RetornarSom: String; override;
+  end;
+
+  TPassaro = class(TAnimal)
+  private
+  public
+    constructor Create;
+    function RetornarSom: String; override;
+  end;
+
+implementation
+
+end.

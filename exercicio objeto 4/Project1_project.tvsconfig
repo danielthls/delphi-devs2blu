@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.UFrmPrincipal" Type="System.String" Value="UFrmPrincipal" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.UCombustivel" Type="System.String" Value="UCombustivel" Category="General" IsBrowsable="False" />
+</TgConfig>

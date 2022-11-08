@@ -1,0 +1,100 @@
+unit UfrmPedidos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TfrmPedidos = class(TForm)
+    DBNavigator1: TDBNavigator;
+    dtsPedidoCompra: TDataSource;
+    PedidoCompra: TFDTable;
+    LookupComprador: TFDTable;
+    dtsComprador: TDataSource;
+    dtsFornecedor: TDataSource;
+    LookupFornecedor: TFDTable;
+    PedidoCompraId: TFDAutoIncField;
+    PedidoCompraNumero: TLongWordField;
+    PedidoCompraDataPedido: TDateField;
+    PedidoCompraidComprador: TLongWordField;
+    PedidoCompraidFornecedor: TLongWordField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    DBLookupComboBoxComprador: TDBLookupComboBox;
+    DBLookupComboBoxFornecedor: TDBLookupComboBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBNavigator2: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Label6: TLabel;
+    dtsItemCompra: TDataSource;
+    ItemCompra: TFDTable;
+    LookupProduto: TFDTable;
+    ItemCompraId: TFDAutoIncField;
+    ItemCompraQuantidade: TFloatField;
+    ItemCompraidPedidoCompra: TLongWordField;
+    ItemCompraidProduto: TLongWordField;
+    LookupProdutoId: TFDAutoIncField;
+    LookupProdutoDescricao: TStringField;
+    LookupProdutoidUnidadeMedida: TLongWordField;
+    ItemCompraLookupProduto: TStringField;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure ItemCompraBeforePost(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPedidos: TfrmPedidos;
+
+implementation
+
+{$R *.dfm}
+
+uses UdmPedidos;
+
+procedure TfrmPedidos.ItemCompraBeforePost(DataSet: TDataSet);
+begin
+  ItemCompraidPedidoCompra.AsInteger := PedidoCompraID.AsInteger;
+end;
+
+procedure TfrmPedidos.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  //No form close todas as tabelas necessariamente tem que ser fechadas
+  Action := caFree;
+  PedidoCompra.Close;
+  LookupComprador.Close;
+  LookupFornecedor.Close;
+
+  ItemCompra.Close;
+  LookupProduto.Close;
+
+  frmPedidos:= nil;
+end;
+
+procedure TfrmPedidos.FormCreate(Sender: TObject);
+begin
+  //No form create todas as tabelas necessariamente tem que ser abertas
+  PedidoCompra.Open;
+  LookupComprador.Open;
+  LookupFornecedor.Open;
+
+  ItemCompra.Open;
+  LookupProduto.Open;
+
+end;
+
+end.

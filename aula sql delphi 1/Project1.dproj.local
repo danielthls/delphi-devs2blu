@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/31 20:17:37.000.678,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:19:58.000.280,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 20:19:58.000.280,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.dfm</Transaction>
+    <Transaction>2022/10/31 20:20:01.000.651,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Project1.dproj</Transaction>
+    <Transaction>2022/10/31 21:04:28.000.119,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/31 21:04:28.000.119,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/31 21:04:55.000.686,=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.pas</Transaction>
+    <Transaction>2022/10/31 21:05:11.000.433,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPedidos.pas</Transaction>
+    <Transaction>2022/10/31 21:05:11.000.433,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit1.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPedidos.dfm</Transaction>
+    <Transaction>2022/10/31 21:06:18.000.469,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPedidos.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UdmPedidos.dfm</Transaction>
+    <Transaction>2022/10/31 21:06:18.000.469,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmPedidos.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UdmPedidos.pas</Transaction>
+    <Transaction>2022/10/31 21:26:40.000.334,=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit2.pas</Transaction>
+    <Transaction>2022/10/31 21:26:55.000.033,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit2.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmComputadores.dfm</Transaction>
+    <Transaction>2022/10/31 21:26:55.000.033,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\Unit2.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmComputadores.pas</Transaction>
+    <Transaction>2022/10/31 21:50:48.000.480,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmComputadores.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmCompradores.pas</Transaction>
+    <Transaction>2022/10/31 21:50:48.000.480,C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmComputadores.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\aula sql delphi 1\UfrmCompradores.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

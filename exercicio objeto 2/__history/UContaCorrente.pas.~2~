@@ -1,0 +1,79 @@
+unit UContaCorrente;
+
+interface
+
+type
+  TContaCorrente = class
+    private
+      FNumeroConta: integer;
+      FNome: string;
+      FSaldo: double;
+      function GetConta: integer;
+      procedure setConta(const Value: integer);
+      function GetNome: string;
+      function GetSaldo: double;
+      procedure setNome(const Value: string);
+      procedure setSaldo(const Value: double);
+
+    public
+      property NumeroConta: integer read GetConta write setConta;
+      property Nome: string read GetNome write setNome;
+      property Saldo: double read GetSaldo write setSaldo;
+      procedure alterarNome;
+      function deposito: double;
+      function saque: double;
+  end;
+
+implementation
+
+{ TContaCorrente }
+//================ Procedures e Functions
+procedure TContaCorrente.alterarNome;
+begin
+
+end;
+
+function TContaCorrente.deposito: double;
+begin
+
+end;
+
+function TContaCorrente.saque: double;
+begin
+
+end;
+
+
+//================== Gets
+function TContaCorrente.GetConta: integer;
+begin
+  Result := FNumeroConta;
+end;
+
+function TContaCorrente.GetNome: string;
+begin
+  Result := FNome;
+end;
+
+function TContaCorrente.GetSaldo: double;
+begin
+  Result := FSaldo;
+end;
+
+//=============== Sets
+procedure TContaCorrente.setConta(const Value: integer);
+begin
+  FNumeroConta := Value;
+end;
+
+procedure TContaCorrente.setNome(const Value: string);
+begin
+  FNome := Value;
+end;
+
+procedure TContaCorrente.setSaldo(const Value: double);
+begin
+  FSaldo := Value;
+end;
+
+end.

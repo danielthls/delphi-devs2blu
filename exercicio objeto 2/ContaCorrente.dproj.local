@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/10 20:17:29.000.334,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:17:37.000.489,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:17:55.000.254,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 2\UContaCorrente.pas</Transaction>
+    <Transaction>2022/10/10 20:18:05.000.908,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 2\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/10 20:18:05.000.908,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 2\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/10 20:18:19.000.378,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\delphi-devs2blu\exercicio objeto 2\ContaCorrente.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

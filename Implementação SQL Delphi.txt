@@ -1,0 +1,21 @@
+1 - Verificar se o arquivo libmysql.dll está na pasta 'Bibliotecas' do projeto
+2 - Clicar com o botão direito no Projeto, selecionar Add New > Other > Database > Data Module
+3 - Adicionar os seguintes objetos: TFDConnection, TFDPhysMySQLDriverLink e FTDGUIxWaitCursor
+2 - Procurar o Data Module (.dfm) do projeto e no objeto TFDPhysMySQLDriverLink adicionar o arquivo 'libmysql.dll' na propriedade VendorLib e selecionar MySQL em BaseDriverID
+3 - No TFDConnection, clicar com o botão direito e abrir Connection Editor;
+ a - Configurar Database (Schema no MySQL)
+ b - Configurar User_name (padrão: root)
+ c - Configurar senha	
+ d - Configurar Server (normalmente localhost, para banco de dados do próprio computador)
+ e - Configurar Port (3306 para MySQL)
+ f - Testar a conexão
+
+
+Objetos do Data Module (.dfm)
+- FTDConnection: Objeto que conecta o banco de dados ao Delphi
+- TFDPhysMySQLDriverLink: Objeto que configura o Delphi para ler MySQL sem problemas
+- FTDGUIxWaitCursor: Mostra ícone enquanto as tabelas estão sendo carregadas
+
+Links úteis
+- www.mockaroo.com : gerador de banco de dados aleatórios
+
