@@ -39,7 +39,21 @@ select year(criadoem), count(*) from comanda where year(criadoem) = year(curdate
 select id, criadoem, max(valor) from comanda where year(criadoem) = year(curdate()) and month(criadoem) = month(curdate()) group by day(criadoem);
 
 -- 14 O valor de cada comanda (baseado nos itens) juntamente com o item mais caro da comanda;
+<<<<<<< HEAD
+select comanda.id, sum(comandaproduto.valorTotal), max(comandaproduto.valorTotal) from comanda inner join comandaproduto on comandaproduto.comandaId = comanda.id 
+group by comanda.id;
+
+-- 15 O valor que cada cliente já gastou no restaurante;
+select pessoa.id, pessoa.nome, sum(comanda.valor) from pessoa inner join comanda on comanda.clienteid = pessoa.id group by pessoa.id;
+
+-- 16 Listar o código das mesas juntamente com o nome dos atendentes responsáveis por cada mesa (apenas as mesas que contém atendente);
+select mesa.id, mesa.codigo, pessoa.nome from mesa inner join pessoa on mesa.atendenteid = pessoa.id;
+
+-- 17 Listar as comandas com seus produtos mostrando o código da comanda e o nome do produto;
+select comanda.id, comanda.codigo, produto.nome 
+=======
 
 -- 15 O valor que cada cliente já gastou no restaurante;
 
 
+>>>>>>> origin/main
