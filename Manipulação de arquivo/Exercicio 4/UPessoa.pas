@@ -3,7 +3,8 @@ unit UPessoa;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
@@ -17,6 +18,8 @@ type
     btnLer: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnLerClick(Sender: TObject);
   private
     { Private declarations }
     FArq: TextFile;
@@ -34,6 +37,16 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmPessoa.btnGravarClick(Sender: TObject);
+begin
+  Gravar;
+end;
+
+procedure TfrmPessoa.btnLerClick(Sender: TObject);
+begin
+  Ler;
+end;
+
 procedure TfrmPessoa.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   CloseFile(FArq);
@@ -41,18 +54,18 @@ end;
 
 procedure TfrmPessoa.FormShow(Sender: TObject);
 begin
-  AssignFile(FArq,'cadastro.txt');
-  {$I-}
+  AssignFile(FArq, 'cadastro.txt');
+{$I-}
   Reset(FArq);
 
   if IOResult <> 0 then
-    Rewrite(FArq) //Arquivo não existe e será criado
+    Rewrite(FArq) // Arquivo não existe e será criado
   else
   begin
     CloseFile(FArq);
-    Append(FArq); //O arquivo existe e será aberto para saídas adicionais
+    Append(FArq); // O arquivo existe e será aberto para saídas adicionais
   end;
-  {$I+}
+{$I+}
 end;
 
 procedure TfrmPessoa.Gravar;
@@ -61,30 +74,85 @@ var
   i, xCod: Integer;
   xDataNasc: TDate;
 begin
-  xDataNasc
-  xCod := 0;
-  while (not eof(FArq)) do
-  begin
-    Readln(FArq, xLinha);
-    i := pos('|', xLinha);
-    xCod := strToInt(copy(xLinha, 1, i-1)) + 1;
-  end;
+  try
+    xDataNasc := StrToDateDef(edtNasc.text, now);
+    Reset(FArq);
 
-  if (edtNome.Text <> '') and
-     (edtNasc.Text <> '') then
-  begin
-    //Grava uma linha com os dados de um aluno no arquivo
-    Writeln(FArq, intToStr(xCod),                '|',
-                  edtNome.Text,                  '|',
-                  Str(dtpNascimento.Date), '|');
-    edtNome.Clear;
-    dtpNascimento.date := now;
+    if eof(FArq) then
+      xCod := 0
+    else
+    begin
+      while (not eof(FArq)) do
+      begin
+        Readln(FArq, xLinha);
+        i := pos('|', xLinha);
+        xCod := strToInt(copy(xLinha, 1, i - 1)) + 1;
+      end;
+    end;
+
+    if (edtNome.text <> '') and (edtNasc.text <> '') then
+    begin
+      // Grava uma linha com os dados de um aluno no arquivo
+      Append(FArq);
+      Writeln(FArq, intToStr(xCod), '|', edtNome.text, '|',
+        dateToStr(xDataNasc), '|');
+      edtNome.Clear;
+      edtNasc.Clear;
+    end;
+  finally
+
   end;
 
 end;
 
 procedure TfrmPessoa.Ler;
+var
+  xLinha, xNome, xDataNasc, xCod: String;
+  xReg, i: Integer;
 begin
+  mmLista.Clear;
+
+  // Abre o arquivo texto para leitura
+  Reset(FArq);
+
+  try
+    xReg := 0;
+    // Enquanto nÃ£o atingir a marca de final de arquivo
+    while (not eof(FArq)) do
+    begin
+      // LÃª uma linha, com os dados de uma pessoa, do arquivo
+      Readln(FArq, xLinha);
+
+      xReg := xReg + 1;
+
+      // Recupera o cÃ³digo da pessoa
+      i := pos('|', xLinha);
+      xCod := copy(xLinha, 1, i - 1);
+      delete(xLinha, 1, i);
+
+      // Recupera o nome do aluno
+      i := pos('|', xLinha);
+      xNome := copy(xLinha, 1, i - 1);
+      delete(xLinha, 1, i);
+
+      // Recupera 1Âª nota do aluno
+      i := pos('|', xLinha);
+      xDataNasc := copy(xLinha, 1, i - 1);
+      delete(xLinha, 1, i);
+
+      // Processando e exibindo os dados recuperados
+
+      mmLista.Lines.Add('Registro Nro......: ' + intToStr(xReg));
+      mmLista.Lines.Add('Código da pessoa..: ' + xCod);
+      mmLista.Lines.Add('Nome..............: ' + xNome);
+      mmLista.Lines.Add('Data de Nascimento: ' + xDataNasc);
+
+      mmLista.Lines.Add('');
+    end;
+
+  finally
+    //CloseFile(FArq);
+  end;
 
 end;
 

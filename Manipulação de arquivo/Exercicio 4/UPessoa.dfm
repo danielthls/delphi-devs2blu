@@ -57,6 +57,7 @@ object frmPessoa: TfrmPessoa
     Height = 25
     Caption = 'Gravar'
     TabOrder = 3
+    OnClick = btnGravarClick
   end
   object btnLer: TButton
     Left = 238
@@ -65,5 +66,6 @@ object frmPessoa: TfrmPessoa
     Height = 25
     Caption = 'Ler'
     TabOrder = 4
+    OnClick = btnLerClick
   end
 end
