@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/12/07 19:17:41.911,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 19:18:13.554,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\XML\Exercicio Aula 2 - Gravar\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 19:18:13.554,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\XML\Exercicio Aula 2 - Gravar\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/07 19:18:22.192,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\XML\Exercicio Aula 2 - Gravar\CriandoXML.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
