@@ -1,0 +1,51 @@
+unit frmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    edtNome: TEdit;
+    Label2: TLabel;
+    edtPrimeiraNota: TEdit;
+    Label3: TLabel;
+    edtSegundaNota: TEdit;
+    btnGravar: TButton;
+    btnLer: TButton;
+    mmDiario: TMemo;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+    FArq: TextFile;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  AssignFile(FArq,'diario.txt');
+  {$I-}
+  Reset (FArq);
+
+  if IOResult <> 0 then
+    Rewrite(FArq) //Arquivo não existe e será criado
+  else
+  begin
+    CloseFile(FArq);
+    Append(FArq); //O arquivo existe e será aberto para saídas adicionais
+  end;
+  {$I+}
+end;
+
+end.

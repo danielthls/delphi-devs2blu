@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/12/06 21:44:47.835,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/06 21:48:44.503,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPessoa.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/06 21:48:44.503,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPessoa.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/06 21:51:04.661,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 4\UPessoa.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPessoa.dfm</Transaction>
+    <Transaction>2022/12/06 21:51:04.661,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 4\UPessoa.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UPessoa.pas</Transaction>
+    <Transaction>2022/12/06 21:51:26.903,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 4\Project1.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/12/06 21:51:45.690,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 4\CadastroPessoa.dproj=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 4\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/06 18:36:46.000.342,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/06 18:54:49.000.238,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\Tabuada.dfm</Transaction>
+    <Transaction>2022/12/06 18:54:49.000.238,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\Tabuada.pas</Transaction>
+    <Transaction>2022/12/06 18:55:14.000.628,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\Tabuada.pas=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\frmTabuada.pas</Transaction>
+    <Transaction>2022/12/06 18:55:14.000.628,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\Tabuada.dfm=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\frmTabuada.dfm</Transaction>
+    <Transaction>2022/12/06 18:55:24.000.680,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\Exercicio 1 - Gravar\Tabuada.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
