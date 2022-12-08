@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/12/07 20:24:28.867,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 20:30:14.823,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/07 20:30:14.823,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 20:30:46.338,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\infoComputador.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/12/07 20:30:53.235,=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 20:31:09.405,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\UInfoPC.pas=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
