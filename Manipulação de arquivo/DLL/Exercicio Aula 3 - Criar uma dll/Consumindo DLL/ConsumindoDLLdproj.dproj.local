@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/12/09 18:51:33.361,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/09 19:01:15.833,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 3 - Criar uma dll\Consumindo DLL\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/09 19:01:15.833,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 3 - Criar uma dll\Consumindo DLL\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/12/09 19:01:35.473,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 3 - Criar uma dll\Consumindo DLL\ConsumindoDLLdproj.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

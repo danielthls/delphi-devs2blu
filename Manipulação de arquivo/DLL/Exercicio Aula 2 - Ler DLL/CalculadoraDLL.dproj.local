@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/12/07 21:33:02.108,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/07 21:36:07.427,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/12/07 21:36:07.427,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/07 21:36:17.174,C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\CalculadoraDLL.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/12/07 21:33:02.000.108,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 21:36:07.000.427,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/12/07 21:36:07.000.427,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/12/07 21:36:17.000.174,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dtlsilva\Documents\Devs2Blu\Manipulação de arquivo\DLL\Exercicio Aula 2 - Ler DLL\CalculadoraDLL.dproj</Transaction>
   </Transactions>
 </BorlandProject>
